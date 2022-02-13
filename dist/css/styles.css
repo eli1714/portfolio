@@ -1,0 +1,500 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+.navbar .brand {
+  position: absolute;
+  align-self: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 10px;
+  top: 10px;
+}
+
+.navbar .fa-laptop-code:before {
+  content: "\f5fc";
+}
+
+/*--------------------------------------------------------------
+# Navbar toggler
+--------------------------------------------------------------*/
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+/* Remove border from toggler */
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #e74c3c;
+  display: block;
+  transition: all 0.2s;
+  margin: 6px 0;
+}
+
+/* Adds Space between the lines */
+.middle-bar {
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(49deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-49deg);
+  transform-origin: 10% 90%;
+}
+
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Primary Content
+--------------------------------------------------------------*/
+.intro {
+  width: 100%;
+  height: 100vh;
+  background-color: #313131;
+  position: relative;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+.intro p {
+  color: #fff;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+.intro .social-links {
+  margin-top: 30px;
+}
+
+.intro .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.intro .social-links a:hover {
+  color: #0563bb;
+}
+
+/*--------------------------------------------------------------
+# Global Styles
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #45505b;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+#about {
+  background: #f3f3f3;
+}
+
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+
+#profile-pic {
+  border-radius: 100%;
+  background-color: #333;
+}
+
+
+/*--------------------------------------------------------------
+# Resume 
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+  margin-left: 8px;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #0563bb;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+.projects .projects-item {
+  margin-bottom: 30px;
+}
+
+.projects .projects-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(69, 80, 91, 0.8);
+}
+
+.projects .projects-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.projects .projects-wrap .projects-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects .projects-wrap .projects-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #d7dce1;
+  border-left: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.projects .projects-wrap .projects-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #d7dce1;
+  border-right: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.projects .projects-wrap .projects-info h4 {
+  font-size: 20px;
+  color: #45505b;
+  font-weight: 600;
+}
+
+.projects .projects-wrap .projects-info p {
+  color: #45505b;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.projects .projects-wrap .projects-links a {
+  color: #45505b;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.projects .projects-wrap .projects-links a:hover {
+  color: #148af9;
+}
+
+.projects .projects-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.projects .projects-wrap:hover .projects-info {
+  opacity: 1;
+}
+
+.projects .projects-wrap:hover .projects-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.projects .projects-wrap:hover .projects-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  background-color: #333;
+}
+
+.contact .section-title h2, .contact .section-title p {
+  color: #fff;
+}
+
+.contact .email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .email-form input,
+.contact .email-form textarea {
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 14px;
+  background: #333;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.contact .email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .email-form button[type=submit] {
+  background: #0563bb;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .email-form button[type=submit]:hover {
+  background: #0678e3;
+}
+
+
+
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+#footer {
+  background: #111;
+  color: #45505b;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+#footer .social-links {
+  margin: 0 0 20px 0;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #0563bb;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #0678e3;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .credits {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
