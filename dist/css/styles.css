@@ -355,7 +355,7 @@ section {
 .projects .projects-wrap .projects-info p {
   color: #45505b;
   font-size: 14px;
-  padding: 0;
+  padding: 0 10px;
   margin: 0;
 }
 
@@ -401,7 +401,8 @@ section {
   background-color: #333;
 }
 
-.contact .section-title h2, .contact .section-title p {
+.contact .section-title h2,
+.contact .section-title p {
   color: #fff;
 }
 
